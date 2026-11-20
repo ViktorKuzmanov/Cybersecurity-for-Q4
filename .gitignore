@@ -1,0 +1,18 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+
+# Private security notes: share with Filip directly, never commit
+for-filip-security-bugs.md
+
+# Test results and downloads
+probe/
+*.pdf
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
