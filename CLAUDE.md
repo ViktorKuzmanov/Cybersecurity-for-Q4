@@ -16,6 +16,16 @@ The folder name (`stealQ4DataTask`) reflects the first task, data theft, but the
 
 The work is defensive: find the gaps so they get fixed.
 
+## Context: the app already has real users
+
+The app is not pre-launch. There are already almost 100 test users, and these are real people, not internal accounts. Treat every data-exposure gap as **live today**, not hypothetical:
+
+- Any of these users can already copy data if the gap exists (scraping, API/MCP, chat, file links), and could share it with other people, groups or marketplaces. Once data leaves, it cannot be recalled.
+- So rank findings by "could one of the current ~100 users do this today, with an ordinary account?" Gaps open to any signed-in or free user rank higher.
+- Prioritize fixes that are quick and stop bulk export (per-account limits, rate limiting, blocking expired accounts) ahead of polish.
+- Where possible, check logs for signs that bulk copying has already happened (very high request counts, full-catalog crawls, large chat/SQL exports per account), and say so in findings.
+- This does not loosen the task rules below: still test only our own sites and never use or share real client data.
+
 ## Current task: data security review (first task; others will follow)
 
 **Can someone scrape or steal our data from the website, API or chat?**
