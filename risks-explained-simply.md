@@ -4,8 +4,8 @@ A beginner-friendly companion to `data-security-review.md`. Think of Q4 as a sho
 
 ## The 11 risks
 
-**1. Anyone can make a free account that sees everything.**
-The sign-up page for the AI-tools product (MCP) lets anyone create an account without paying. The website checks that you're logged in, but never checks whether you've paid. It's like a gym that checks you have a membership card but not whether the card has expired. People whose subscription ran out keep full access too (DD-67).
+**1. Free sign-ups get our data, and expired ones get the website too.**
+Anyone can sign up for the AI-tools product (MCP) with any email, even one that isn't theirs, and gets 31 days free with no card. A new email gives another free month, so it never has to end. During the free month the website correctly says "This account is MCP only" (we tested this on preview). The problem comes after the free month ends: the website checks that you're logged in but never checks whether you've paid, so the expired account gets the whole website and unlimited chat. It's like a gym that checks you have a membership card but not whether it's expired. Paid subscriptions that run out keep full access the same way (DD-67).
 
 **2. Earnings-call transcripts don't need a login.**
 Anyone can read our transcripts and our AI summaries without logging in. The calls are numbered 1, 2, 3…, and our sitemap (the list of pages we give Google) names all 454 of them. A small script could copy every one in a few minutes. It's like leaving the shop's stock room unlocked and taping a map of it to the front door.
