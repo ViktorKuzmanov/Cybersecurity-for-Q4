@@ -41,6 +41,17 @@ pw : Branko123!?
 and I used the connector with claude chat and got correct answer for 
 use q4 testce 1 connector for this - get me all the data and documents for 2222 company in saudi arabia
 
+### How to exploit it yourself :
+
+1. Add preview as a connector in Claude. In the Claude desktop app (or claude.ai), go to Settings → Connectors → Add custom connector. Give it any name, like "Q4 preview test", and use this URL: https://preview-api.q4.sa/mcp
+2. Click Connect. A browser page from preview-api.q4.sa opens with a Q4 sign-in / create-account form.
+3. Create the account. Enter a full name, an email and a password.
+    * For the email, a Gmail alias like youraddress+q4test@gmail.com works, so it's clearly a test account and you still get any mail.
+    * Use a new password that you don't use anywhere else.
+
+4. Now you can get data from Q4 by asking claude and using the q4 connector you set up
+
+
 ## What is already fine
 
 - Financial figures (`/financials`, `/source-facts`) and the file proxy (`/documents/:id/file`) require login.
